@@ -23,7 +23,9 @@ fun InsertDataComponent(modifier: Modifier = Modifier) {
     val textFieldPropertyTwo: MutableState<String> = remember { mutableStateOf("") }
 
     Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+
         Text(modifier = Modifier.padding(bottom = 5.dp), text = "Insert your data here")
+
         TextField(modifier = Modifier.padding(bottom = 5.dp),
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
@@ -32,6 +34,7 @@ fun InsertDataComponent(modifier: Modifier = Modifier) {
             placeholder = {
                 Text(text = "Insert first property here")
             })
+
         TextField(modifier = Modifier.padding(bottom = 5.dp), singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             value = textFieldPropertyTwo.value,
@@ -39,6 +42,7 @@ fun InsertDataComponent(modifier: Modifier = Modifier) {
             placeholder = {
                 Text(text = "Insert second property here")
             })
+
         Button(modifier = Modifier.padding(bottom = 5.dp), onClick = { /*TODO*/ }) {
             Text(text = "Set data to object")
         }

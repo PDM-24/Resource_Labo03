@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,7 +32,8 @@ fun ObjectListComponent(modifier: Modifier = Modifier) {
                 .fillMaxWidth()
                 .padding(top = 8.dp, start = 8.dp, end = 8.dp)
         ) {
-
+            /*TODO: Desplegar la lista que se encuentra en DummyData, haciendo uso de lo antes estudiado en Kotlin
+            *  Ademas, cada objeto tiene que ser mapeado de manera especifica con los atirbutos que se especifican y un icono representativo*/
         }
     }
 }
