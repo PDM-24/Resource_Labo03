@@ -16,12 +16,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.alexisflop.labo03.model.ObjectClass
+import com.alexisflop.labo03.viewmodel.DataViewModel
 
 @Composable
 fun InsertDataComponent(modifier: Modifier = Modifier) {
     val textFieldPropertyOne: MutableState<String> = remember { mutableStateOf("") }
     val textFieldPropertyTwo: MutableState<String> = remember { mutableStateOf("") }
-
+    val viewModel = DataViewModel()
     Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
 
         Text(modifier = Modifier.padding(bottom = 5.dp), text = "Insert your data here")
@@ -43,7 +45,14 @@ fun InsertDataComponent(modifier: Modifier = Modifier) {
                 Text(text = "Insert second property here")
             })
 
-        Button(modifier = Modifier.padding(bottom = 5.dp), onClick = { /*TODO*/ }) {
+        Button(modifier = Modifier.padding(bottom = 5.dp), onClick = { /*TODO*/
+        val myList: MutableList<ObjectClass> = mutableListOf(
+            ObjectClass("Nombre", "Apellido"),
+            ObjectClass("Numero", "DUI"),
+            ObjectClass("1", "2"),
+            ObjectClass("Adrian", "God"))
+            viewModel.setData(myList)
+        }) {
             Text(text = "Set data to object")
         }
     }
